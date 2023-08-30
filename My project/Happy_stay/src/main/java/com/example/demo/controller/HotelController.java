@@ -1,4 +1,5 @@
 package com.example.demo.controller;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,5 +54,29 @@ public class HotelController {
     @GetMapping("showbyid/{cust_id}")
     public Optional<CustomerDetails> showid(@PathVariable int cust_id){
     	return cs.showbyid(cust_id);
+    }
+    @GetMapping("customer/sort/{name}")
+    public List<CustomerDetails> getsort(@PathVariable String name){
+    	return cs.sortinfoc(name);
+    }
+    @GetMapping("customer/Pagination/{pn}/{pc}")
+    public List<CustomerDetails> pageinfo(@PathVariable int pn,@PathVariable int pc){
+    	return cs.getbyPagec(pn, pc);
+    }
+    @GetMapping("customer/pageandsort/{pn}/{ps}/{s}")
+    public List<CustomerDetails> pageandsort(@PathVariable int pn,@PathVariable int ps,@PathVariable String s){
+    	return cs.getpageandsortc(pn, ps, s);
+    }
+    @GetMapping("getrooms/in/{day_in}")
+    public List<CustomerDetails> getdaysin(@PathVariable Date day_in){
+    	return cs.getbydayin(day_in);
+    }
+    @GetMapping("getrooms/out/{day_out}")
+    public List<CustomerDetails> getdaysout(@PathVariable Date day_out){
+    	return cs.getbydayout(day_out);
+    }
+    @DeleteMapping("delete/{id}")
+    public String deleteit(@PathVariable int id){
+    	return cs.delettherecord(id);
     }
 }

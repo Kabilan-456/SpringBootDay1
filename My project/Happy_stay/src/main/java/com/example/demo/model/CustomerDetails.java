@@ -2,51 +2,55 @@ package com.example.demo.model;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.transaction.Transactional;
 
 @Entity
-@Table(name="CustomerDetails")
+@Table(name="customerdetail")
+@Transactional
 public class CustomerDetails {
     @Id
-    private int cust_id;
-    private String cust_name;
-    private String room_type;
-    private long ph_no;
-    private int no_of_days;
+    private int custid;
+    private String custname;
+    private String roomtype;
+    private long phno;
+    private int noofdays;
     private double amount;
-    private Date day_in;
-    private Date day_out;
-	public int getCust_id() {
-		return cust_id;
+    private Date dayin;
+    private Date dayout;
+	public int getCustid() {
+		return custid;
 	}
-	public void setCust_id(int cust_id) {
-		this.cust_id = cust_id;
+	public void setCustid(int custid) {
+		this.custid = custid;
 	}
-	public String getCust_name() {
-		return cust_name;
+	public String getCustname() {
+		return custname;
 	}
-	public void setCust_name(String cust_name) {
-		this.cust_name = cust_name;
+	public void setCustname(String custname) {
+		this.custname = custname;
 	}
-	public String getRoom_type() {
-		return room_type;
+	public String getRoomtype() {
+		return roomtype;
 	}
-	public void setRoom_type(String room_type) {
-		this.room_type = room_type;
+	public void setRoomtype(String roomtype) {
+		this.roomtype = roomtype;
 	}
-	public long getPh_no() {
-		return ph_no;
+	public long getPhno() {
+		return phno;
 	}
-	public void setPh_no(long ph_no) {
-		this.ph_no = ph_no;
+	public void setPhno(long phno) {
+		this.phno = phno;
 	}
-	public int getNo_of_days() {
-		return no_of_days;
+	public int getNoofdays() {
+		return noofdays;
 	}
-	public void setNo_of_days(int no_of_days) {
-		this.no_of_days = no_of_days;
+	public void setNoofdays(int noofdays) {
+		this.noofdays = noofdays;
 	}
 	public double getAmount() {
 		return amount;
@@ -54,35 +58,32 @@ public class CustomerDetails {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public Date getDay_in() {
-		return day_in;
+	public Date getDayin() {
+		return dayin;
 	}
-	public void setDay_in(Date day_in) {
-		this.day_in = day_in;
+	public void setDayin(Date dayin) {
+		this.dayin = dayin;
 	}
-	public Date getDay_out() {
-		return day_out;
+	public Date getDayout() {
+		return dayout;
 	}
-	public void setDay_out(Date day_out) {
-		this.day_out = day_out;
+	public void setDayout(Date dayout) {
+		this.dayout = dayout;
 	}
 	public CustomerDetails() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
-	public CustomerDetails(int cust_id, String cust_name, String room_type, long ph_no, int no_of_days, double amount,
-			Date day_in, Date day_out) {
+	public CustomerDetails(int custid, String custname, String roomtype, long phno, int noofdays, double amount,
+			Date dayin, Date dayout) {
 		super();
-		this.cust_id = cust_id;
-		this.cust_name = cust_name;
-		this.room_type = room_type;
-		this.ph_no = ph_no;
-		this.no_of_days = no_of_days;
+		this.custid = custid;
+		this.custname = custname;
+		this.roomtype = roomtype;
+		this.phno = phno;
+		this.noofdays = noofdays;
 		this.amount = amount;
-		this.day_in = day_in;
-		this.day_out = day_out;
+		this.dayin = dayin;
+		this.dayout = dayout;
 	}
-    
 	
-    
 }
