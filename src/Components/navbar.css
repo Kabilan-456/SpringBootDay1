@@ -1,0 +1,48 @@
+*{
+    text-align: center;
+  }
+  #hb{
+    height:50px;
+    width:150px;
+    font-size: 40px;
+    border-radius: 40px;
+    border-color: brown;
+    background-color: rgba(239, 121, 121, 0.784);
+    color:brown;
+    cursor:grab;
+  }
+.usercon{
+  height:500px;
+  width:500px;
+  margin-top: 10%;
+  margin-left: 40%;
+  margin-right: 70%;
+}
+#tit{
+  font-size: 30px;
+  color: rgb(113, 22, 22); 
+}
+#main{
+  color:brown;
+  font-size: 30px;
+}
+#title{
+  height: 30px;
+  width:300px;
+}
+#hh{
+  color:brown;
+  font-size: 30px;
+}
+#hhh{
+  height:40px;
+  width:700px;
+}
+#tab{
+  border-color: rgb(7, 7, 7);
+  border: solid 5px;
+}
+ 
+  
+
+  
